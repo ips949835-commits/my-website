@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>For You my love ❤️</title>
+    <style>
+        :root {
+            --accent: #ff6b81;
+            --bg: #fff7f9;
+            --card: #ffffff;
+            --text: #222;
+            --muted: #555;
+            --glass: rgba(255, 255, 255, 0.7);
+            font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(180deg, var(--bg), #fff);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            padding: 24px;
+        }
+
+        .wrap {
+            max-width: 920px;
+            margin: 0 auto
+        }
+
+        header {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 28px;
+        }
+
+        .logo {
+            width: 78px;
+            height: 78px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, var(--accent), #ff9fb3);
+            display: grid;
+            place-items: center;
+            color: white;
+            font-weight: 700;
+            font-size: 22px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px
+        }
+
+        p.lead {
+            margin: 6px 0 0;
+            color: var(--muted)
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 28px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 18px;
+            border-radius: 14px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .hero-left h2 {
+            margin: 0 0 8px
+        }
+
+        .cta {
+            margin-top: 12px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 0;
+            cursor: pointer;
+            font-weight: 600;
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn.secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid rgba(255, 107, 129, 0.12)
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 12px
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px
+        }
+
+        .timeline {
+            margin-top: 14px
+        }
+
+        .time-item {
+            display: flex;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.05)
+        }
+
+        .surprise {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .big-msg {
+            padding: 18px;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #fff0f2, #fff7f9);
+            font-weight: 600
+        }
+
+        footer {
+            margin-top: 28px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        /* Responsive */
+        @media (max-width:880px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery img {
+                height: 100px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo"> &nbsp;♥ </div>
+            <div>
+                <h1>Just for you, [MAHI]</h1>
+                <p class="lead">A small surprise made with ♥ — open and scroll down.</p>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="card hero-left">
+                <h2>Hey [MAHI VERMA],</h2>
+                <p>“Happy Princess Day, my love! 💖 <br>
+                    I made this little page just for you — to share the feelings I sometimes can’t put into words. You
+                    make my days brighter, my heart lighter, and every moment with you feels like magic. Here’s a small
+                    surprise and some memories to remind you how truly special you are to me, today and always. ✨”.</p>
+
+                <div class="cta">
+                    <button class="btn" id="revealBtn">Open Surprise</button>
+                    <audio id="mySong" src="Pehli Nazar Mein.mp3" loop></audio>
+
+                    <!-- Play/Pause Button -->
+                    <button id="playSong">Play Song</button>
+
+                    <script>
+                        const button = document.getElementById('playSong');
+                        const song = document.getElementById('mySong');
+
+                        button.addEventListener('click', () => {
+                            if (song.paused) {
+                                song.play();
+                                button.textContent = "Pause Song";
+                            } else {
+                                song.pause();
+                                button.textContent = "Play Song";
+                            }
+                        });
+                    </script>
+                </div>
+
+                <div class="timeline">
+                    <div class="time-item">
+                        <div style="min-width:86px;font-weight:700">30 SEP 2025</div>
+                        <div><strong>First TIME MEET</strong>
+                            <div style="color:var(--muted)">“The first time I met you, that day I saw you for the first
+                                time, and you were even more beautiful than I had imagined.” — I still remember
+                                “That was the best part of my life.”.</div>
+                        </div>
+                    </div>
+                    <div class="time-item">
+                        <div style="min-width:86px;font-weight:700">01 oct 2025</div>
+                        <div><strong>Lajpat Nagar Market </strong>
+                            <div style="color:var(--muted)">“That day at Lajpat Market was so special for me. Shopping
+                                with you, seeing your smile… everything was perfect.”</div>
+                        </div>
+                    </div>
+                    <div class="time-item">
+                        <div style="min-width:86px;font-weight:700">02 oct 2025</div>
+                        <div><strong>Bangla Sahib Gurudwara, Delhi</strong>
+                            <div style="color:var(--muted)">“Our unforgettable day at Bangla Sahib Gurudwara, Delhi 🌸
+                                We walked together, exploring the beautiful gurudwara, feeling peaceful and happy. Doing
+                                matha teka side by side ❤️, sharing smiles, quiet moments, and laughter — it was so
+                                special being with you. Every second there with you is a memory I’ll always treasure.”
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="card">
+                <div style="text-align:center">
+                    <!-- Profile Image -->
+                    <img src="WhatsApp Image 2025-11-18 at 12.28.38 AM (1).jpeg" alt="Profile Image"
+                        style="width:350px;height:150px;border-radius:18px;object-fit:cover;display:block;margin:0 auto 12px" />
+                    <div class="big-msg">You are my favourite person.</div>
+                </div>
+
+                <h3 style="margin-top:14px">Memories</h3>
+                <div class="gallery">
+                    <img src="WhatsApp Image 2025-11-18 at 12.28.40 AM.jpeg" alt="Memory 1">
+                    <img src="WhatsApp Image 2025-11-18 at 12.28.39 AM.jpeg" alt="Memory 2">
+                    <img src="WhatsApp Image 2025-11-18 at 12.28.38 AM (2).jpeg" alt="Memory 3">
+                </div>
+            </aside>
+
+        </section>
+
+        <section class="card" style="margin-bottom:18px">
+            <h3>Little Surprise 💌</h3>
+            <div class="surprise">
+                <div>
+                    Just a small note to say… every moment with you makes me smile 😊
+                    <br>Click the button below to see a tiny special message made just for you!
+                </div>
+                <button class="btn" id="surpriseShow">Reveal</button>
+            </div>
+
+            <!-- Hidden Surprise Box with 3 Images -->
+            <div id="surpriseBox"
+                style="margin-top:12px;display:none;padding:14px;border-radius:10px;background:var(--glass);">
+                <p style="margin:0">
+                    “Hey [Princess], 💖 <br>
+                    Surprise! Yeh chhota sa page aur yeh little box maine sirf tumhare liye banaya hai. Har word, har
+                    design aur har memory me mera pyaar chhupa hai.
+                    Tum meri zindagi ka sabse special part ho, aur main chahta hoon ki tum hamesha khush raho. <br>
+                    Ye images, ye message aur ye page sirf ek chhoti si koshish hai dikhane ke liye ki tumhare liye main
+                    kitna kuch kar sakta hoon. 🌸✨
+                    Tumhari smile aur khushi mere liye sabse important hai, aur main hamesha tumhare saath aise hi
+                    moments create karna chahta hoon. <br>
+                    I LOVE YOU! 💕”
+                </p>
+                <h4 style="margin-top:12px;">Some Memories 🌸</h4>
+                <div style="display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;">
+                    <img src="WhatsApp Image 2025-11-18 at 1.21.33 AM.jpeg" alt="Memory 1" class="lightbox-img"
+                        style="width:100px;height:100px;object-fit:cover;border-radius:10px;cursor:pointer;">
+                    <img src="WhatsApp Image 2025-11-18 at 1.21.32 AM.jpeg" alt="Memory 2" class="lightbox-img"
+                        style="width:100px;height:100px;object-fit:cover;border-radius:10px;cursor:pointer;">
+                    <img src="WhatsApp Image 2025-11-18 at 1.21.33 AM (1).jpeg" alt="Memory 3" class="lightbox-img"
+                        style="width:100px;height:100px;object-fit:cover;border-radius:10px;cursor:pointer;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightboxModal"
+            style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);justify-content:center;align-items:center;z-index:999;">
+            <span id="closeLightbox"
+                style="position:absolute;top:20px;right:30px;font-size:40px;color:white;cursor:pointer;">&times;</span>
+            <img id="lightboxImg" src="" style="max-width:90%;max-height:90%;border-radius:12px;">
+        </div>
+
+        <script>
+            // Reveal Surprise Box
+            document.getElementById('surpriseShow').addEventListener('click', () => {
+                const b = document.getElementById('surpriseBox');
+                b.style.display = b.style.display === 'none' ? 'block' : 'none';
+            });
+
+            // Lightbox functionality
+            const lightboxImgs = document.querySelectorAll('.lightbox-img');
+            const lightboxModal = document.getElementById('lightboxModal');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const closeLightbox = document.getElementById('closeLightbox');
+
+            lightboxImgs.forEach(img => {
+                img.addEventListener('click', () => {
+                    lightboxImg.src = img.src;
+                    lightboxModal.style.display = 'flex';
+                });
+            });
+
+            closeLightbox.addEventListener('click', () => {
+                lightboxModal.style.display = 'none';
+            });
+
+            // Close on outside click
+            lightboxModal.addEventListener('click', e => {
+                if (e.target === lightboxModal) {
+                    lightboxModal.style.display = 'none';
+                }
+            });
+        </script>
+
+        <script>
+            document.getElementById('surpriseShow').addEventListener('click', () => {
+                const b = document.getElementById('surpriseBox');
+                b.style.display = b.style.display === 'none' ? 'block' : 'none';
+            });
+        </script>
+
+
+        <footer class="card">
+            <p>Made with every beat of my heart ♥️ by
+
+                <strong>[ISHU]</strong> <br>
+
+                ✨ This website was built for you on November 18, 2025. ✨
+            </p>
+        </footer>
+    </div>
+
+    <audio id="song" src="audio/smallsong.mp3"></audio>
+
+    <script>
+        document.getElementById('revealBtn').addEventListener('click', () => {
+            alert("Tumhara surprise: I love you — more than pizza 🍕 jo maine rat khaya tumhe akela chor ke SORRY ");
+        });
+        document.getElementById('surpriseShow').addEventListener('click', () => {
+            const b = document.getElementById('surpriseBox');
+            b.style.display = b.style.display === 'none' ? 'block' : 'none';
+        });
+        document.getElementById('playSong').addEventListener('click', () => {
+            const s = document.getElementById('song');
+            if (!s) { alert('Song file missing: add audio/smallsong.mp3'); return; }
+            s.play();
+        });
+    </script>
+</body>
+
+</html>
